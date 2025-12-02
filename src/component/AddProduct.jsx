@@ -1,49 +1,67 @@
 function AddProduct(props) {
-    const {changeProducts} = props;
+    const { changeProducts } = props;
 
     const SubmitHandler = (event) =>{
         event.preventDefault();
 
         const newProduct = {};
-        Object.assign(newProduct, { productName: event.target["product-name"].value});
-        Object.assign(newProduct, { qty: event.target["product-qty"].value});
-        Object.assign(newProduct, { price: event.target["product-price"].value});
-        Object.assign(newProduct, { status: event.target["product-status"].value});
+        Object.assign(newProduct, 
+            {productName: event.target["product-name"].value,
+             qty: event.target["qty"].value,
+             price: event.target["price"].value,
+             status: event.target["status"].value
+            });
 
-        changeProducts((product)=>{
-            return [...product, newProduct]
+        changeProducts((products)=>{
+            return [...products, newProduct] 
         });
         event.target["product-name"].value = "";
-        event.target["product-qty"].value = "";
-        event.target["product-price"].value = "";
-        event.target["product-status"].value = "0";
-    }
+        event.target["qty"].value = "";
+        event.target["price"].value = "";
+        event.target["status"].value = "0";
+    };
 
     return (
-        <aside>
-            <form noValidate onSubmit={SubmitHandler}>
-                <h2>Add Product</h2>
-                <div> 
-                    <label htmlFor="product-name">product name:</label>
-                    <input type="text" name="product-name" id="product-name" placeholder="input product name"/>
+        <aside className="w-[30%]">
+            <form className="p-10 border-2 border-solid border-white h-full w-full"
+            noValidate onSubmit={SubmitHandler}>
+                <h2 className="m-5 text-4xl border-b-2 border-solid border-b-blue-700">
+                    Add Product
+                </h2>
+                <div className="m-5"> 
+                    <label className="text-2xl"
+                    htmlFor="product-name">Product name:</label>
+                    <br />
+                    <input className="border-2 border-solid border-blue-400 bg-blue-400 rounded-[5px] text-black"
+                    type="text" name="product-name" id="product-name" placeholder=" input product name "/>
                 </div>
-                <div> 
-                    <label htmlFor="qty">quantity:</label> 
-                    <input type="number" name="qty" id="qty" placeholder="input quantity"/>
+                <div className="m-5"> 
+                    <label className="text-2xl"
+                    htmlFor="qty">Quantity:</label>
+                    <br /> 
+                    <input className="border-2 border-solid border-blue-400 bg-blue-400 rounded-[5px] text-black"
+                    type="number" name="qty" id="qty" placeholder="input quantity"/>
                 </div>
-                <div> 
-                    <label htmlFor="price">price:</label> 
-                    <input type="number" name="price" id="price" placeholder="input price"/>
+                <div className="m-5"> 
+                    <label className="text-2xl"
+                    htmlFor="price">Price:</label>
+                    <br /> 
+                    <input className="border-2 border-solid border-blue-400 bg-blue-400 rounded-[5px] text-black"
+                    type="number" name="price" id="price" placeholder="input price"/>
                 </div>
-                <div> 
-                    <label htmlFor="status">Status</label> 
+                <div className="m-5"> 
+                    <label className="text-2xl"
+                    htmlFor="status">Status: </label> 
                     <select name="status" id="status" defaultValue={"0"} title="Judul">
                         <option value="0" disabled> select status!</option>
                         <option value="available" className="text-black">Available</option>
                         <option value="empty" className="text-black">Empty</option>
                     </select>
                 </div>
-                <button type="submit">Submit</button>
+                <br />
+                <div className="flex justify-center">
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </aside>
     )

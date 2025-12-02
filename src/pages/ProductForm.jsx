@@ -3,13 +3,15 @@ import ShowProduct from "../component/ShowProduct";
 import AddProduct from "../component/AddProduct";
 
 function ProductForm() {
-  const [product, setproduct] = useState([]);
+  const [product, setproduct] = useState([]);//{productName : "name"}{pri}
   return (
     <>
-      <header className="p-5 h-[15vh] bg-amber-200 text-2xl font-bold select-none">Product List</header>
+      <header className="p-5 h-[20vh] bg-blue-400 text-2xl font-bold select-none w-screen text-center">
+       <h1>Product Form</h1>  
+      </header>
       <main className="flex min-h-[85vh]">
         <ShowProduct products={product} />
-        <AddProduct changeproduct={setproduct} />
+        <AddProduct changeProducts={setproduct} />
       </main>
     </>
   );
