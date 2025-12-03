@@ -3,7 +3,7 @@ import ShowProduct from "../component/ShowProduct";
 import AddProduct from "../component/AddProduct";
 
 function ProductForm() {
-  const [product, setproduct] = useState([]);//{productName : "name"}{pri}
+  const [product, setproduct] = useState([]);
   return (
     <>
       <header className="p-5 h-[20vh] bg-blue-400 text-2xl font-bold select-none w-screen text-center">

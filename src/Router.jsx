@@ -6,6 +6,7 @@ import ProductForm from "./pages/ProductForm"
 import GetRickAndMorty from './pages/GetRickAndMorty'
 import NotFound from './pages/NotFound'
 import Review from './pages/Review'
+import Login from './pages/Login'
 
 export default function Router() {
   return (
@@ -15,6 +16,7 @@ export default function Router() {
         <Route path='/ProductForm' element={<ProductForm />}/>
         <Route path='/GetRickAndMorty' element={<GetRickAndMorty />}/>
         <Route path='/Review' element={<Review />}/>
+        <Route path='/Login' element={<Login />}/>
         <Route path='/*' element={<NotFound />}/>
     </Routes>
   )

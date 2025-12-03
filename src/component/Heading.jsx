@@ -19,6 +19,12 @@ export default function Heading() {
                 <li>
                   <Link to={"/GetRickAndMorty"}>Rick & Morty</Link>
                 </li>
+                <li>
+                  <Link to={"/Review"}>Review App</Link>
+                </li>
+                <li>
+                  <Link to={"/Login"}>Login</Link>
+                </li>
             </ul>
         </nav>
     </header>
