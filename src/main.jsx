@@ -1,15 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import GetRickAndMorty from './pages/GetRickAndMorty'
+import { BrowserRouter } from 'react-router'
+// import GetRickAndMorty from './pages/GetRickAndMorty'
 // import './index.css'
 // import App from './App.jsx'
 // import ProductForm from './pages/ProductForm.jsx'
+import Router from './Router'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App/> */}
     {/* <ProductForm/> */}
-    <GetRickAndMorty/>
+    {/* <GetRickAndMorty/> */}
+    <BrowserRouter>
+    <Router/>
+    </BrowserRouter>
   </StrictMode>,
 )

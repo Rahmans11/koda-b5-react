@@ -1,0 +1,12 @@
+import React from 'react'
+import Heading from '../component/Heading'
+import Footer from '../component/Footer'
+
+export default function Review() {
+  return (
+    <>
+    <Heading/>
+    <Footer/>
+    </>
+  )
+}

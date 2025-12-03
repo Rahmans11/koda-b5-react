@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import './App.css'
-import Greeting from '../component/Greeting';
+import "/src/App.css"
+import Greeting from "/src/component/Greeting";
+import Heading from '../component/Heading';
+import Footer from '../component/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,10 +23,11 @@ function App() {
 
   return (
     <>
-      <header className="text-blue-600">
-        <Greeting message="Hi Every one!"/>
-      </header>
+      <Heading/>
       <main>
+          <div className="text-blue-600">
+            <Greeting message="Hi Every one!"/>
+          </div>
         <div className="card">
           <p>Count : {count}</p>
         <button onClick={ handleIncrement}>
@@ -35,9 +38,7 @@ function App() {
         </button>
       </div>
       </main>
-      <footer>
-        Thank You!
-      </footer>
+      <Footer/>
     </>
   )
 }

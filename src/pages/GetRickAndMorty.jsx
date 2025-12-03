@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 
+import Heading from "../component/Heading";
+import Footer from "../component/Footer";
 import ShowCharacters from "../component/ShowCharacters";
 import FilterCharacters from "../component/FilterCharacters";
 import SearchCharacter from "../component/SearchCharacter";
 
-function GetRickAndMorty(queryParams) {
+function GetRickAndMorty() {//queryParams
     const [characterList,  setCharacterList] = useState([]); 
     
     useEffect(()=>{
         (async () =>{
-            const url = "https://rickandmortyapi.com/api/character?"
-            let query = new URLSearchParams(queryParams).toString();
+            const url = "https://rickandmortyapi.com/api/character/?"
+            // let query = new URLSearchParams(queryParams).toString();
             try{
-                const response = await fetch(url+query);
+                const response = await fetch(url);//+query
                 if(!response.ok){
                     throw new Error(`${response.status}: ${response.statusText}`)
                 }
@@ -39,16 +41,16 @@ function GetRickAndMorty(queryParams) {
 
     return(
         <>
-            <header>
-                <h1 className="text-center text-orange-600">
-                    Rick And Morty Character
-                </h1>
-            </header>
+            <Heading/>
             <main>
+                <h2 className="text-center text-orange-600">
+                    Rick And Morty Character
+                </h2>
                 <SearchCharacter/>
-                <FilterCharacters/>
+                <FilterCharacters characterList = {characterList}/>
                 <ShowCharacters characterList = {characterList}/>
             </main>
+            <Footer/>
         </>
     )
 }
