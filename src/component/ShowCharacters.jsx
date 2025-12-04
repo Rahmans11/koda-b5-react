@@ -6,7 +6,7 @@ export default function ShowCharacters(props) {
     <section className="grid grid-cols-4">
         {characterList.map((item, idx)=>{
             return (
-                <div className="border-2 border-solid border-orange-600"
+                <div className="border-2 border-solid border-blue-400 font-"
                 key={idx}>
                         <img src={item.image} alt="image-character" />
                         <p >Character Name: {item.name}</p>

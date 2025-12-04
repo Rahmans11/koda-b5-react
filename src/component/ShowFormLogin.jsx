@@ -9,7 +9,6 @@ const [form, setForm] = useState({
 const submitHandler = (event) =>{
     event.preventDefault();
     const newLogin = {};
-
     
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if(!regex.test(form.email) || form.password.length < 5){

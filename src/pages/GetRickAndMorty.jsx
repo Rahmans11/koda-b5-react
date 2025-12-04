@@ -4,17 +4,19 @@ import Heading from "../component/Heading";
 import Footer from "../component/Footer";
 import ShowCharacters from "../component/ShowCharacters";
 import FilterCharacters from "../component/FilterCharacters";
-import SearchCharacter from "../component/SearchCharacter";
 
-function GetRickAndMorty() {//queryParams
+function GetRickAndMorty() {
+    const [inputQuery, setQuery] = useState('');
     const [characterList,  setCharacterList] = useState([]); 
-    
+    const handleInputQuery = (input) =>{
+        setQuery(input);
+    }
     useEffect(()=>{
         (async () =>{
             const url = "https://rickandmortyapi.com/api/character/?"
-            // let query = new URLSearchParams(queryParams).toString();
             try{
-                const response = await fetch(url);//+query
+                const response = await fetch(url + inputQuery);
+                console.log("ini url yg dipakek :"+ url + inputQuery)
                 if(!response.ok){
                     throw new Error(`${response.status}: ${response.statusText}`)
                 }
@@ -36,18 +38,17 @@ function GetRickAndMorty() {//queryParams
                 console.error(error)
             }
         })()
-    },[])
+    },[inputQuery])
 
 
     return(
         <>
             <Heading/>
             <main>
-                <h2 className="text-center text-orange-600">
+                <h2 className="text-center text-3xl font-extrabold text-blue-600 m-[20px_20px]">
                     Rick And Morty Character
                 </h2>
-                <SearchCharacter/>
-                <FilterCharacters characterList = {characterList}/>
+                <FilterCharacters inputFilter = {handleInputQuery}/>
                 <ShowCharacters characterList = {characterList}/>
             </main>
             <Footer/>
