@@ -24,18 +24,20 @@ function App() {
   return (
     <>
       <Heading/>
-      <main>
-          <div className="text-blue-600">
-            <Greeting message="Hi Every one!"/>
-          </div>
-        <div className="card">
-          <p>Count : {count}</p>
-        <button onClick={ handleIncrement}>
+      <main className='w-[100%] h-[100vh] flex flex-col justify-center gap-15'>
+        <Greeting message="Lets Count!"/>
+        <div className="card font-semibold text-3xl">
+          <p className='mb-10'>Count : {count}</p>
+          <div className='flex justify-center gap-20'>
+            <button className='w-[7%] h-[60px]'
+         onClick={ handleIncrement}>
           +
         </button>
-        <button onClick={ handleDecrement}>
+        <button className='w-[7%] h-[60px]' 
+         onClick={ handleDecrement}>
           -
         </button>
+          </div>
       </div>
       </main>
       <Footer/>

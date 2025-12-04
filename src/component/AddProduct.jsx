@@ -59,8 +59,8 @@ function AddProduct(props) {
                     </select>
                 </div>
                 <br />
-                <div className="flex justify-center">
-                    <button type="submit">Submit</button>
+                <div>
+                    <button className="w-30 h-10" type="submit">Submit</button>
                 </div>
             </form>
         </aside>

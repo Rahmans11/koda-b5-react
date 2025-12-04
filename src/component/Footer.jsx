@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className='font-semibold italic'>
         --Thank You--
     </footer>
   )

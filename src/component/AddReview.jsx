@@ -19,25 +19,24 @@ export default function AddReview(props) {
             noValidate onSubmit={submitHandler}>
         <h2 className="m-5 text-4xl border-b-2 border-solid border-b-blue-700">
                     Add Review
-                </h2>
-                <div className="m-5"> 
-                    <label className="text-2xl"
-                    htmlFor="name">Name:</label>
-                    <br />
-                    <input className="border-2 border-solid border-blue-400 bg-blue-400 rounded-[5px] text-black"
-                    type="text" name="name" id="name" placeholder=" input Name "/>
-                </div>
-                <div className="m-5"> 
-                    <label className="text-2xl"
-                    htmlFor="message">Message:</label>
-                    <br />  
-                    <textarea className="border-2 border-solid border-blue-400 bg-blue-400 rounded-[5px] text-black"
-                    name="message" id="message" rows="5" cols="40" placeholder="input message..."></textarea>
-                </div>
-                <br />
-                <div className="flex justify-center">
-                    <button type="submit">Submit</button>
-                </div>
+        </h2>
+        <div className="m-5"> 
+         <label className="text-2xl text-right"
+         htmlFor="name">Name:
+         </label>
+          <br />
+          <input className="border-2 border-solid border-blue-400 bg-blue-400 rounded-[5px] text-black"
+            ype="text" name="name" id="name" placeholder=" input Name "/>
+        </div>
+        <div className="m-5"> 
+          <label className="text-2xl text-start"
+            htmlFor="message">Message:</label>
+          <br />  
+         <textarea className="border-2 border-solid border-blue-400 bg-blue-400 rounded-[5px] text-black"
+          name="message" id="message" rows="5" cols="40" placeholder="input message..."></textarea>
+        </div>
+        <br />
+       <button className='w-[25%] h-13' type="submit">Submit</button>
       </form>
     </aside>
   )

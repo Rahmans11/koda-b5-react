@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-
-
 export default function ShowFormLogin(props) {
 const {setLogin} = props;
 const [form, setForm] = useState({
@@ -38,33 +36,39 @@ const onChangeHandler = (e) => {
   };
 
   return (
-    <form noValidate onSubmit={submitHandler}>
+    <form className="p-10 border-2 border-solid border-white h-fit w-[40%] p-10"
+    noValidate onSubmit={submitHandler}>
         <div>
-            <h2 className="text-center font-bold text-xl">
+            <h2 className="text-center font-bold text-xl m-5 text-4xl border-b-2 border-solid border-b-blue-700">
             WellCome Back👋
         </h2>
-        <p>Sign in with your data that your entered during registration</p>
+        <p className='inline justify-around'>Sign in with your data that your entered during registration</p>
         </div>
-        <div>
-            <label htmlFor="email">Email</label>
+        <br />
+        <div className="m-5">
+            <label className="text-2xl"
+            htmlFor="email">Email</label>
             <br />
-            <input className="border-2 border-solid border-black p-1 w-full"
+            <input className="border-2 border-solid border-white p-1 w-full"
             type="email" name='email' id="email" placeholder="Enter your email"
             value={form.email}
             onChange={onChangeHandler}
             />
         </div>
-        <div>
-            <label htmlFor="password">Password</label>
+        <div className="m-5">
+            <label className="text-2xl"
+            htmlFor="password">Password</label>
             <br />
-            <input className="border-2 border-solid border-black p-1 w-full"
+            <input className="border-2 border-solid border-white p-1 w-full"
             type="password" name='password' id="password" placeholder="Enter your email"
             value={form.password}
             onChange={onChangeHandler}
             />
         </div>
         <p>Forgot Your Password?</p>
-        <button type="submit">Login</button>
+        <br />
+        <button className='w-[60%] h-12'
+        type="submit">Login</button>
     </form>
   )
 }

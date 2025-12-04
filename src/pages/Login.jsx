@@ -8,7 +8,9 @@ export default function Login() {
   return (
     <>
     <Heading/>
-    <ShowFormLogin setLogin={setLogin}/>
+    <main className='w-screen h-screen flex justify-center p-10'>
+      <ShowFormLogin setLogin={setLogin}/>
+    </main>
     <Footer/>
     </>
   )

@@ -5,7 +5,7 @@ import ReviewCard from "./ReviewCard"
 export default function ShowReview(props) {
   const {reviews} = props;
   return (
-      <article className="flex-1 p-5 border-2 border-solid border-white">
+      <article className="grid grid-cols-8 grid-rows-4 w-[70%] p-[20px_20px] border-2 border-solid border-white">
         {
           reviews.map((review, idx)=>{
             return <ReviewCard key={idx} name={review.name} message={review.message}/>;
