@@ -16,7 +16,7 @@ function GetRickAndMorty() {
             const url = "https://rickandmortyapi.com/api/character/?"
             try{
                 const response = await fetch(url + inputQuery);
-                console.log("ini url yg dipakek :"+ url + inputQuery)
+                // console.log("ini url yg dipakek :"+ url + inputQuery)
                 if(!response.ok){
                     throw new Error(`${response.status}: ${response.statusText}`)
                 }

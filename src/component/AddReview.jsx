@@ -13,6 +13,7 @@ export default function AddReview(props) {
     event.target["name"].value = ""; 
     event.target["message"].value = "";
   }
+
   return (
     <aside>
       <form className="p-10 border-2 border-solid border-white h-full w-full"
