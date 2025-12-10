@@ -19,9 +19,14 @@ function useFetch(initialState) {
         if (!response.ok) {
           throw new Error(`${response.status}: ${response.statusText}`);
         }
-        const newData = await response.json();
+        let newData = await response.json();
         setIsLoading(false);
-        setData(Array.isArray(newData) ? newData : newData.results);
+        if(Array.isArray(newData)){
+          newData;
+        }else{
+          newData = newData.results;
+        }
+        setData(newData);
         console.log(newData);
 
         setError("");
