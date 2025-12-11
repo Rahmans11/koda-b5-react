@@ -1,10 +1,11 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import ShowFormLogin from '../component/ShowFormLogin'
 import Heading from "../component/Heading"
 import Footer from "../component/Footer"
+// import { useNavigate } from 'react-router';
 
 export default function Login() {
-  const [login, setLogin] = useState([]);
+  const [login, setLogin] = useState();
   return (
     <>
     <Heading/>

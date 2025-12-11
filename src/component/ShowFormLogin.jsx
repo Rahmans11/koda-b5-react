@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router';
 
 export default function ShowFormLogin(props) {
+const navigate = useNavigate();
 const {setLogin} = props;
 const [form, setForm] = useState({
     email:"",
@@ -22,11 +24,17 @@ const submitHandler = (event) =>{
     }
     
     console.log(newLogin)
+
+    const key = "input";
+    localStorage.setItem(key, JSON.stringify(newLogin));
+    navigate("/", { replace: true });
     setForm({
       email: "",
       password: "",
     });
 }
+
+
 
 const onChangeHandler = (e) => {
     setForm((form) => {

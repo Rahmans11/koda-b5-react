@@ -1,20 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router'
-// import GetRickAndMorty from './pages/GetRickAndMorty'
-// import './index.css'
-// import App from './App.jsx'
-// import ProductForm from './pages/ProductForm.jsx'
+import { Provider as ReduxProvider } from 'react-redux'
 import Router from './Router'
+import reduxStore from "./redux/store";
+import UserProvider from './contexts/UserProvider'
 
 
 createRoot(document.querySelector("#root")).render(
   <StrictMode>
-    {/* <App/> */}
-    {/* <ProductForm/> */}
-    {/* <GetRickAndMorty/> */}
-    <BrowserRouter>
-    <Router/>
-    </BrowserRouter>
+    <ReduxProvider store={reduxStore}>
+      <UserProvider>
+        <BrowserRouter>
+          <Router/>
+        </BrowserRouter>
+      </UserProvider>
+    </ReduxProvider>
   </StrictMode>,
 )

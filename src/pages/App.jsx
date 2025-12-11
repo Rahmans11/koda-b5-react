@@ -29,11 +29,11 @@ function App() {
         <div className="card font-semibold text-3xl">
           <p className='mb-10'>Count : {count}</p>
           <div className='flex justify-center gap-20'>
-            <button className='w-[7%] h-[60px]'
+            <button className='w-[7%] h-[60px] bg-blue-400'
          onClick={ handleIncrement}>
           +
         </button>
-        <button className='w-[7%] h-[60px]' 
+        <button className='w-[7%] h-[60px] bg-blue-400' 
          onClick={ handleDecrement}>
           -
         </button>

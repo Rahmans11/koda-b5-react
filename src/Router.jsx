@@ -13,12 +13,13 @@ export default function Router() {
   return (
     <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/App' element={<App />}/>
-        <Route path='/ProductForm' element={<ProductForm />}/>
-        <Route path='/GetRickAndMorty' element={<GetRickAndMorty />}/>
-        <Route path='/Review' element={<Review />}/>
-        <Route path='/Login' element={<Login />}/>
+        <Route path='/app' element={<App />}/>
+        <Route path='/productForm' element={<ProductForm />}/>
+        <Route path='/getRickAndMorty' element={<GetRickAndMorty />}/>
+        <Route path='/review' element={<Review />}/>
+        <Route path='/login' element={<Login />}/>
         <Route path='/customFetch' element={<FetchCustom/>}/>
+        <Route path='/smokerForm'/>
         <Route path='/*' element={<NotFound />}/>
     </Routes>
   )
