@@ -107,7 +107,6 @@ export default function Home() {
                 type="text"
                 name="profile"
                 id="profile"
-                placeholder="Enter your username"
                 value={form.profile}
                 onChange={onChangeHandler}
               />

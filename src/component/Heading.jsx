@@ -34,7 +34,7 @@ export default function Heading() {
   };
 
   return (
-    <header className="flex justify-between pr-[20px] pl-[20px] pt-[15px] min-h-[10.5vh] h-fit min-w-fit bg-blue-300">
+    <header className="flex justify-between pr-5 pl-5 pt-[15px] min-h-[10.5vh] h-fit min-w-fit bg-blue-300">
       <nav className="flex justify-center w-fit">
         <section className={`${display ? "block" : "hidden"}`} id="menu">
           <ul className="">
@@ -74,6 +74,13 @@ export default function Heading() {
               </Link>
             </li>
             <li className="m-3 bg-blue-700 w-screen h-15 flex justify-center items-center">
+              <Link to={"/smokerForm"}>
+                <p className="text-center text-white text-2xl font-semibold">
+                  Smoker Form
+                </p>
+              </Link>
+            </li>
+            <li className="m-3 bg-blue-700 w-screen h-15 flex justify-center items-center">
               <Link to={"/customFetch"}>
                 <p className="text-center text-white text-2xl font-semibold">
                   Custom Fetch
@@ -85,16 +92,7 @@ export default function Heading() {
                 existUser ? "flex" : "hidden"
               } m-3 bg-blue-700 w-screen h-15 flex justify-center items-center`}
             >
-              <button
-                onClick={logout
-                //   () => {
-                //   dispatch({
-                //     type: "DELETE_USER",
-                //     payload: state.user.id,
-                //   });
-                // }
-              }
-              >
+              <button onClick={logout}>
                 <p className="text-center text-white text-2xl font-semibold">
                   Logout
                 </p>

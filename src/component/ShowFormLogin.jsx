@@ -43,10 +43,10 @@ const onChangeHandler = (e) => {
   };
 
   return (
-    <form className="p-10 border-2 border-solid border-white h-fit w-[40%] p-10"
+    <form className="border-2 border-solid border-white h-fit w-[40%] p-10"
     noValidate onSubmit={submitHandler}>
         <div>
-            <h2 className="text-center font-bold text-xl m-5 text-4xl border-b-2 border-solid border-b-blue-700">
+            <h2 className="text-center font-bold m-5 text-4xl border-b-2 border-solid border-b-blue-700">
             WellCome Back👋
         </h2>
         <p className='inline justify-around'>Sign in with your data that your entered during registration</p>

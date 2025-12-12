@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound'
 import Review from './pages/Review'
 import Login from './pages/Login'
 import FetchCustom from './pages/FetchCustom'
+import SmokerForm from './pages/SmokerForm'
 
 export default function Router() {
   return (
@@ -19,7 +20,7 @@ export default function Router() {
         <Route path='/review' element={<Review />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/customFetch' element={<FetchCustom/>}/>
-        <Route path='/smokerForm'/>
+        <Route path='/smokerForm' element={<SmokerForm/>}/>
         <Route path='/*' element={<NotFound />}/>
     </Routes>
   )

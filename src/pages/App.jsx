@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Heading/>
-      <main className='w-[100%] h-[100vh] flex flex-col justify-center gap-15'>
+      <main className='w-screen h-screen flex flex-col justify-center gap-15'>
         <Greeting message="Lets Count!"/>
         <div className="card font-semibold text-3xl">
           <p className='mb-10'>Count : {count}</p>
